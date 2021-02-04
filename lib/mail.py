@@ -10,8 +10,9 @@ class LibMail(object):
     
     """
     
-    def __init__(self):
-        self.data = load(open("data.json", mode="r", encoding="UTF-8"))
+    def __init__(self, path):
+        self.path = path
+        self.data = load(open(f"{self.path}data.json", mode="r", encoding="UTF-8"))
 
 
     def send_mail(self, title,  msg_send, user_email):
