@@ -16,6 +16,14 @@
     font-weight: bold;
 }
 
+#menu {
+    display: none;
+}
+
+.mobile_menu {
+    display: none;
+}
+
 .menu-desk {
     width: 60%;
     margin: auto;

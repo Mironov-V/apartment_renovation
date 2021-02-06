@@ -14,23 +14,57 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- Assets -->
     <link rel="stylesheet" href="static/access/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="static/access/css/media.css" type="text/css" media="all">
 </head>
 
 <body>
+    <!-- Mobile menu -->
+    <div class="mobile_menu">
+        <header class="col-12">
+            <div class="row">
+                <div class="col-8">
+                    <h3 style="margin-top: 5%;" class="text-center">Menu</h3>
+                </div>
+                <div class="col-4">
+                    <i id="close_menu" class="far fa-times-circle"></i>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <ul>
+            <a href="#services">
+                <li>Услуги</li>
+            </a>
+            <a href="#team">
+                <li>О бригаде</li>
+            </a>
+            <a href="#works">
+                <li>Наши работы</li>
+            </a>
+            <a href="#comments">
+                <li>Отзывы</li>
+            </a>
+        </ul>
+    </div>
 
     <!-- Header block -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3">
                     <a class="navbar-brand" href="#">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="col-5 left mt1">
+                                    <div class="col-lg-5 col-md-5 left col-3 mt1">
                                         <img class="img-fluid" src="static/access/img/4.png" alt="РЕМОНТ КВАРТИРЫ ПОЛНОГО ЦИКЛА">
                                     </div>
-                                    <div class="col-6 right mt1">
+                                    <div id="menu" class="col-lg-5 col-md-5 right col-3 mt1">
+                                        <button style="margin: 0 auto;color: #fff;border: solid;display:block;" class="btn"><i class="fas fa-bars"></i></button>
+                                    </div>
+
+
+                                    <div class="col-6 col-md-6 col-12 right mt1">
                                         <p class="logo-text">РЕМОНТ КВАРТИРЫ<br>ПОЛНОГО <span style="color:#ee813a;">ЦИКЛА</span></p>
                                     </div>
                                 </div>
@@ -39,32 +73,31 @@
                     </a>
                 </div>
 
-                <div class="col-6">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-lg-6 col-md-6 col">
+                    <div class="collapse navbar-collapse">
                         <ul class="navbar-nav me-auto menu-desk">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Услуги</a>
+                                <a class="nav-link" aria-current="page" href="#services">Услуги</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">О бригаде</a>
+                                <a class="nav-link" href="#team">О бригаде</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Наши работы</a>
+                                <a class="nav-link" href="#works">Наши работы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Отзывы</a>
+                                <a class="nav-link" href="#comments">Отзывы</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3">
                     <button id='query_tel' type="button" style="border-radius: 0%;" class="btn btn-lend">Заказать звонок</button>
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+
             </div>
         </nav>
     </header>
@@ -114,10 +147,10 @@
                                         <div class="col-12">
                                             <div class="col-10 mx-auto">
                                                 <div class="row">
-                                                    <div class="col-4 d-grid gap-2 mx-auto">
+                                                    <div class="col--lg-4 col-md-6 col-sm-6 col-12 d-grid gap-2 mx-auto">
                                                         <button id='query_tel' class="btn btn-primary btn-carousell" style="background: #ffffff;border-color: #aaafb1;color: #222;" type="button">ПРИГЛАСИТЬ НА ЗАМЕР</button>
                                                     </div>
-                                                    <div class="col-4 d-grid gap-2 mx-auto">
+                                                    <div class="col--lg-4 col-md-6 col-sm-6 col-12 d-grid gap-2 mx-auto">
                                                         <button class="btn btn-primary btn-carousell" style="background: #ee813a;border-color: #ee813a;" type="button">РАСЧИТАТЬ СТОИМОСТЬ</button>
                                                     </div>
                                                 </div>
@@ -170,9 +203,9 @@
 
         <div class="container_fluid mt3 mb3">
             <div class="col-12 mx-auto">
-                <div class="container">
+                <div class="container card-prew">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="card" style="box-shadow: 2px 3px 6px 0px rgb(0 0 0 / 25%);padding: 0.5em;">
                                 <div class="row">
                                     <div class="col-12">
@@ -188,7 +221,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="card" style="box-shadow: 2px 3px 6px 0px rgb(0 0 0 / 25%);">
                                 <div class="row">
                                     <div class="col-12">
@@ -204,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="card" style="box-shadow: 2px 3px 6px 0px rgb(0 0 0 / 25%);padding: 0.5em;">
                                 <div class="row">
                                     <div class="col-12">
@@ -226,8 +259,9 @@
         </div>
 
         <div class="container_fluid mt5 mb3 sleep">
+            <a id="services" href="#"></a>
             <div class="shadow_block"></div>
-            <div class="col-8 mx-auto" style="position: relative;">
+            <div class="col-11 mx-auto" style="position: relative;">
                 <div class="container">
                     <h2 class="text-center">
                         МЫ КОНСУЛЬТИРУЕМ ПО ВСЕМ ЭТАПАМ РЕМОНТА
@@ -264,7 +298,7 @@
                     </div>
                     <div class="mt5"></div>
 
-                    <h3 class="text-center">
+                    <h3 class="text-center f-text">
                         Комплексный ремонт 0Т 130000 руб.<br>По договору 1 этап без предоплаты.<br><br>ЗАЯВКА НА НОМЕР
                         <a style="color: #ee813a;" href="tel:+7 906 780 59 52">+7 906 780 59 52</a> <a style="color: #ee813a;" href="tel:+7 903 733-31-49">+7 903 733-31-49</a>
                     </h3>
@@ -277,7 +311,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -293,7 +327,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -309,7 +343,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -326,7 +360,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -342,7 +376,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3 ">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3 ">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -358,7 +392,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 mx-auto mt3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto mt3">
                             <div class="card shedow">
                                 <div class="card-head">
                                     <strong class="text-center" style="margin-top:0.5em; display: block;">Коридор и прихожая от 20 900 ₽</strong>
@@ -382,13 +416,14 @@
         </div>
 
         <div class="container_fluid mt5 mb3" style="background: #222;color: #fff;padding-top: 8em;padding-bottom: 8em;">
+            <a id="team" href="#"></a>
             <div class="col-10 mx-auto">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
-                            <div class="avatar" style='background: url("static/access/img/prorab.jpg"); height: 100%;;top: 0;left: 0;right: 0;bottom: 0;'></div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="avatar" style='background: url("static/access/img/prorab.jpg"); background-repeat: no-repeat; height: 100%;;top: 0;left: 0;right: 0;bottom: 0;'></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <h3>
                                 <strong>Согласование ремонта и договор будем подписывать со мной с руководителем</strong>
                             </h3>
@@ -448,6 +483,7 @@
         </div>
 
         <div class="container_fluid mt5 mb3 portfolio">
+            <a id="works" href="#"></a>
             <div class="col-10 mx-auto">
                 <h1 class="text-center">ФОТОГРРАФИИ РЕМОНТА КВАРТИР</h1>
                 <br>
@@ -571,6 +607,7 @@
         </div>
 
         <div class="container_fluid mt5 mb3">
+            <a id="comments" href="#"></a>
             <div class="col-10 mx-auto">
                 <h1 class="text-center">ОТЗЫВЫ О НАС О НАШЕМ СПОСОБЕ РЕМОНТА</h1>
                 <br>
@@ -590,18 +627,18 @@
 
         <div class="container_fluid mt5 mb3 sleep">
             <div class="shadow_block"></div>
-            <div class="col-8 mx-auto" style="position: relative;">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-11 mx-auto" style="position: relative;">
                 <div class="container">
                     <h2 class="text-center mt1">
                         <strong style="font-size: 1.01em;">СДЕЛАЙТЕ ЗВОНОК , ОСТАВТЕ ЭЛЕКТРОННУЮ ПОЧТУ , НОМЕР ТЕЛЕФОНА, ИЛИ ПРЕДВАРИТЕЛЬНО ВИДЕО В ПРЯМОМ ЭФИРЕ, И В КОНЦЕ ДЛЯ УТОЧНЕНИЯ ДАННЫХ ПРИГЛАСИТЕ НАШЕГО ЗАМЕРЩИКА ИЛИ ПРОРАБА НА ЗАМЕР <span style="color:#ee813a; ">ПОЛУЧИТЬТОЧНУЮ СМЕТУ И ТОЧНЫЕ СРОКИ.</span></strong>
                     </h2>
                     <br>
-                    <div class="col-8 mx-auto">
+                    <div class="col-12 mx-auto">
                         <form method="POST">
-                            <div class="mb-3">
+                            <div class="mb-3 col-12">
                                 <input style="padding: 1em;font-size: 1.2em;" type="tel" name="call-order" class="form-control" placeholder="ВАШ ТЕЛЕФОН ">
                             </div>
-                            <div class="d-grid gap-2">
+                            <div class="d-grid gap-2 col-12">
                                 <button style="padding: 1.1em;" type="submit" class="btn btn-md btn-lend "><strong>ПРИГЛАСИТЬ НА ЗАМЕР</strong></button>
                             </div>
                         </form>
@@ -611,7 +648,7 @@
         </div>
 
         <div class="container_fluid mt5 mb3">
-            <div class="col-8 mx-auto" style="position: relative;">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-11 mx-auto" style="position: relative;">
                 <div class="container">
                     <h2 class="text-center mt1">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
                     <br><br>
@@ -705,18 +742,18 @@
 
         <div class="container_fluid mt5 sleep" style='padding-top:5.1em;padding-bottom:5em;color: #fff; background-image: url("https://thumb.tildacdn.com/tild3036-6435-4138-b436-656166343832/-/format/webp/dizajn-gostinoj-v-so.jpg");'>
             <div class="shadow_block" style="background: #00000061;"></div>
-            <div class="col-8 mx-auto" style="position: relative;">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-11  mx-auto" style="position: relative;">
                 <div class="container">
                     <h2 class="text-center mt1">
                         <strong style="font-size: 1.01em;">Может у вас есть предложение или вопрос о том ,как можно сделать ремонт с более улучшеной планировкой или дизайном или подбором других митериалов и т.д оставте свой номер телефона и в течении 2 минут вы получите обратный звонок</strong>
                     </h2>
                     <div class="mt5"></div>
-                    <div class="col-8 mx-auto">
+                    <div class="col-lg-8 col-md-8 col-sm-10 col-11 mx-auto">
                         <form method="POST">
-                            <div class="mb-3">
+                            <div class="mb-3 col-12">
                                 <input style="padding: 1em;font-size: 1.2em;" type="tel" name="call-order" class="form-control" placeholder="ВАШ ТЕЛЕФОН ">
                             </div>
-                            <div class="d-grid gap-2">
+                            <div class="d-grid gap-2 col-12">
                                 <button style="padding: 1.1em; color: #fff;" type="submit" class="btn btn-md btn-lend "><strong>ПРИГЛАСИТЬ НА ЗАМЕР</strong></button>
                             </div>
                         </form>
@@ -787,9 +824,9 @@
     <footer class="container_fluid mb3" style="background-color: #222; color:#fff; padding:1.2em;width: 100%;position: absolute;">
         <div class="col-10 mx-auto">
             <div class="row mx-auto">
-                <div class="col-6 mx-auto">
+                <div class="col-lg-8 col-md-8 col-sm-10 col-12 mx-auto">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-4">
                             <img class="img-fluid" src="static/access/img/4.png" alt="РЕМОНТ КВАРТИРЫ ПОЛНОГО ЦИКЛА">
                         </div>
                         <div class="col-8">

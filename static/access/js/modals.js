@@ -1,3 +1,14 @@
+function menu_manager() {
+    menu.onclick = function() {
+        return document.getElementsByClassName("mobile_menu")[0].style.display = "block";
+    }
+    close_menu.onclick = function() {
+        return document.getElementsByClassName("mobile_menu")[0].style.display = "none";
+    }
+}
+
+menu_manager();
+
 function modal_window_open(content = null) {
     document.getElementsByClassName("global_block")[0].style.display = "block";
     if (content == "query_tel") {
