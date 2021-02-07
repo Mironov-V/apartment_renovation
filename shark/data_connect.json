@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "port": "3306",
+    "unix_socket": "/var/run/mysqld/mysqld.sock",
+    "db": "apartment_renovation",
+    "user": "brooks",
+    "password": "Amritta3113",
+    "log_db": "/home/cosmobot/Freelance/apartment_renovation/shark/log/ErrorQueryDB.log"
+}

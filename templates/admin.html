@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--metatextblock-->
+    <title>РЕМОНТ КВАРТИРЫ ПОЛНОГО ЦИКЛА</title>
+    <meta name="description" content="Ремонт квартир в Москве, Мытыщах. Цены на 30% ниже рынка за счет отсутствия посредников и офисных сотрудников. Мы - бригада строителей, все работы мы выполняем собственными руками и вам не нужно переплачивать тем, кто даже не будет принимать участие в ремонте! В бригаде узкопрофильные мастера, без универсалов. Все процессы контролирует прораб. Работы выполняются профессиональным инструментом.">
+    <meta name="keywords" content="новостройка под ключ, ремонт +в новостройке под ключ, ремонт +в новостройке цена, ремонт квартир +в люберцах, ремонт квартир +в люберцах под ключ, ремонт квартир +в новостройке под ключ, ремонт квартир ключ, ремонт квартир ключ цены, ремонт квартир под, р">
+    <meta property="og:title" content="Ремонт квартир под ключ в Люберцах без посредников" />
+    <meta property="og:description" content="Ремонт квартир в Люберцах от 1890 руб/м2. Цены на 30% ниже рынка за счет отсутствия посредников и офисных сотрудников. Мы - бригада строителей, все работы мы выполняем собственными руками и вам не нужно переплачивать тем, кто даже не будет принимать участие в ремонте! В бригаде узкопрофильные мастера, без универсалов. Все процессы контролирует прораб. Работы выполняются профессиональным инструментом.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Assets -->
+    <link rel="stylesheet" href="static/access/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="static/access/css/media.css" type="text/css" media="all">
+</head>
+
+<body>
+    <style>
+        #add_open:hover,
+        #update_open:hover,
+        #delete_open:hover {
+            transition: 0.2s;
+            cursor: pointer;
+            border: solid 0.2em #222;
+            background: #e9e9e9;
+        }
+    </style>
+
+    <!-- Header block -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="col-lg-3 col-md-3">
+                    <a class="navbar-brand" href="#">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-lg-5 col-md-5 left col-3 mt1">
+                                        <img class="img-fluid" src="static/access/img/4.png" alt="РЕМОНТ КВАРТИРЫ ПОЛНОГО ЦИКЛА">
+                                    </div>
+                                    <div class="col-6 col-md-6 col-12 right mt1">
+                                        <p class="logo-text">ПАНЕЛЬ<br><span style="color:#ee813a;">АДМИНИСТРАТОРА</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav me-auto menu-desk">
+                            <a href="{{url_for('index')}}">
+                                <button class="btn btn-lend">ОТКРЫТЬ САЙТ <i class="fas fa-globe-americas"></i></button>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- Block content -->
+    <main>
+        <div class="container_fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt3">
+                        <h2 class="text-center">
+                            ВЫБЕРИТЕ ЛЮБУЮ ОПЦИЮ
+                        </h2>
+
+                        <div class="col-6 mx-auto">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt1">
+                                    <div style="padding: 1em 0;" id="add_open" class="card ful_p2 mx-auto">
+                                        <h3 class="text-center"><strong><i style="color: #11ea36;" class="fas fa-plus"></i><br>Добавить</strong></h3>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-12 mt1 ">
+                                    <div style="padding: 1em 0;" id="update_open" class="card ful_p2 mx-auto">
+                                        <h3 class="text-center"><strong><i style="color: #397ce2;" class="fas fa-pencil-alt"></i><br>Редактировать</strong></h3>
+                                    </div>
+                                </div> -->
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt1">
+                                    <div style="padding: 1em 0;" id="delete_open" class="card ful_p2 mx-auto">
+                                        <h3 class="text-center"><strong><i style="color: #e64646;" class="far fa-trash-alt"></i><br>Удалить</strong></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="add" class="container card col-12 mx-auto mt1" style="padding: 1em 0; display:none;">
+                            <div class="col-12">
+                                <div class="container">
+                                    <p class="right"><strong>Закрыть</strong> <i id="close_add" class="far fa-times-circle"></i></p>
+
+                                </div>
+                            </div>
+                            <div class="mt3"></div>
+                            <div class="container">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                          Добавить работу
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <form method="POST" enctype=multipart/form-data>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Введите название работы</label>
+                                                        <input type="text" name="title_add" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Добавьте файл</label>
+                                                        <input class="form-control" name="file_add" type="file">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Добавить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                              Добавить цену за работу  
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <form method="POST" enctype=multipart/form-data>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Введите название работы</label>
+                                                        <input type="text" name="title_work_price_add" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Укажите цену</label>
+                                                        <input type="text" name="work_price_add" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Добавьте описание</label>
+                                                        <textarea name="desk_work_price_add" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Добавьте файл</label>
+                                                        <input class="form-control" name="file_work_price_add" type="file">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Добавить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          Добавить отзывы
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <form method="POST" enctype=multipart/form-data>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Добавьте файл</label>
+                                                        <input type="hidden" name="f_obj" value="F">
+                                                        <input class="form-control" name="comment_add" type="file">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Добавить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingFoo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFoo" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          Добавить ответы на вопросы
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseFoo" class="accordion-collapse collapse" aria-labelledby="flush-headingFoo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <form method="POST" enctype=multipart/form-data>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Введите вопрос</label>
+                                                        <input type="text" name="question_add" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Составьте ответ</label>
+                                                        <textarea name="response_add" class="form-control"></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Добавить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="update" class="container card col-12 mx-auto mt1" style="padding: 1em 0;display:none;">
+                            <div class="col-12">
+                                <div class="container">
+                                    <p class="right"><strong>Закрыть</strong> <i id="close_update" class="far fa-times-circle"></i></p>
+                                </div>
+                                <div class="mt3"></div>
+                                <div class="container">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingUpdateOne">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUpdateOne" aria-expanded="false" aria-controls="flush-collapseUpdateOne">
+                                              Обновить работы
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseUpdateOne" class="accordion-collapse collapse" aria-labelledby="flush-headingUpdateOne" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Название</th>
+                                                                <th scope="col">Файл</th>
+                                                                <th scope="col">Действие</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for item in portfolio %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}</td>
+                                                                <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingUpdateTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUpdateTwo" aria-expanded="false" aria-controls="flush-collapseUpdateTwo">
+                                              Обновить цены за работы
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseUpdateTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingUpdateTwo" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Название</th>
+                                                                <th scope="col">Файл</th>
+                                                                <th scope="col">Действие</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for item in portfolio %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}</td>
+                                                                <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingUpdateTree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUpdateTree" aria-expanded="false" aria-controls="flush-collapseUpdateTree">
+                                              Обновить отзывы
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseUpdateTree" class="accordion-collapse collapse" aria-labelledby="flush-headingUpdateTree" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Название</th>
+                                                                <th scope="col">Файл</th>
+                                                                <th scope="col">Действие</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for item in portfolio %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}</td>
+                                                                <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingUpdateFoo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUpdateFoo" aria-expanded="false" aria-controls="flush-collapseUpdateFoo">
+                                              Обновить вопрос/ответ
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseUpdateFoo" class="accordion-collapse collapse" aria-labelledby="flush-headingUpdateFoo" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Название</th>
+                                                                <th scope="col">Файл</th>
+                                                                <th scope="col">Действие</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for item in portfolio %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}</td>
+                                                                <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="delete" class="container card col-12 mx-auto mt1" style="padding: 1em 0;display:none;">
+                            <div class="col-12">
+                                <div class="container">
+                                    <p class="right"><strong>Закрыть</strong> <i id="close_delete" class="far fa-times-circle"></i></p>
+                                </div>
+                            </div>
+                            <div class="mt3"></div>
+                            <div class="container">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingDeleteOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDeleteOne" aria-expanded="false" aria-controls="flush-collapseDeleteOne">
+                                          Удалить работу
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseDeleteOne" class="accordion-collapse collapse" aria-labelledby="flush-headingDeleteOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Название</th>
+                                                            <th scope="col">Файл</th>
+                                                            <th scope="col">Действие</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for item in portfolio %}
+                                                        <tr>
+                                                            <th scope="row">{{item[0]}}</th>
+                                                            <td>{{item[1]}}</td>
+                                                            <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            <td>
+                                                                <form method="POST">
+                                                                    <input type="hidden" name="delete_portfolio" value="{{item[0]}}">
+                                                                    <button class="btn btn-lend">Удалить</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingDeleteTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDeleteTwo" aria-expanded="false" aria-controls="flush-collapseDeleteTwo">
+                                          Удалить цену за работ
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseDeleteTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingDeleteTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Название</th>
+                                                            <th scope="col">Цена</th>
+                                                            <th scope="col">Описание</th>
+                                                            <th scope="col">Файл</th>
+                                                            <th scope="col">Действие</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for item in works %}
+                                                        <tr>
+                                                            <th scope="row">{{item[0]}}</th>
+                                                            <td>{{item[1]}}</td>
+                                                            <td>{{item[2]}}</td>
+                                                            <td>{{item[3]}}</td>
+                                                            <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[4])}}" alt="{{item[1]}}"></td>
+                                                            <td>
+                                                                <form method="POST">
+                                                                    <input type="hidden" name="delete_works" value="{{item[0]}}">
+                                                                    <button class="btn btn-lend">Удалить</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingDeleteTree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDeleteTree" aria-expanded="false" aria-controls="flush-collapseDeleteTree">
+                                          Удалить отзыв
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseDeleteTree" class="accordion-collapse collapse" aria-labelledby="flush-headingDeleteTree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Файл</th>
+                                                            <th scope="col">Действие</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for item in comments %}
+                                                        <tr>
+                                                            <th scope="row">{{item[0]}}</th>
+                                                            <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[1])}}"></td>
+                                                            <td>
+                                                                <form method="POST">
+                                                                    <input type="hidden" name="delete_comments" value="{{item[0]}}">
+                                                                    <button class="btn btn-lend">Удалить</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingDeleteFoo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDeleteFoo" aria-expanded="false" aria-controls="flush-collapseDeleteFoo">
+                                          Удалить вопрос/ответ
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseDeleteFoo" class="accordion-collapse collapse" aria-labelledby="flush-headingDeleteFoo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Название</th>
+                                                            <th scope="col">Файл</th>
+                                                            <th scope="col">Действие</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for item in questions %}
+                                                        <tr>
+                                                            <th scope="row">{{item[0]}}</th>
+                                                            <td>{{item[1]}}</td>
+                                                            <td><img style="max-width: 40%;" src="{{ url_for('static', filename=item[2])}}" alt="{{item[1]}}"></td>
+                                                            <td>
+                                                                <form method="POST">
+                                                                    <input type="hidden" name="delete_questions" value="{{item[0]}}">
+                                                                    <button class="btn btn-lend">Удалить</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/8b9970d558.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
+    <script src="static/access/js/admin.js "></script>
+</body>
+
+</html>
